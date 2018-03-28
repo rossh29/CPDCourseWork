@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/vwSwitch"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+
+        <RadioGroup android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="596dp"
+                android:layout_height="wrap_content"
+                android:text="Home" />
+
+            <RadioButton android:layout_height="wrap_content"
+                android:id="@+id/radio0" android:layout_width="wrap_content"
+                android:text="Planned Roadworks" android:checked="true"></RadioButton>
+            <!--<RadioButton android:layout_height="wrap_content"
+                android:id="@+id/radio1" android:layout_width="wrap_content"
+                android:text="Current Incidents"></RadioButton>-->
+            <RadioButton android:layout_height="wrap_content"
+                android:id="@+id/radio2" android:layout_width="wrap_content"
+                android:text="Search"></RadioButton>
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="383dp"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+        <ViewFlipper android:id="@+id/ViewFlipper01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--adding views to ViewFlipper-->
+            <ListView
+                android:id="@+android:id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="#AB9B9F"
+                android:dividerHeight="1dp"
+                android:listSelector="#5EF905"
+                >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="#AB9B9F"
+                android:dividerHeight="1dp"
+                android:listSelector="#AB9B9F"
+                >
+            </ListView>
+
+
+        </ViewFlipper>
+    </LinearLayout>
+
+</LinearLayout>
